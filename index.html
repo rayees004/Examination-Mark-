@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Term Exam Mark Collection</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1>Term Exam Mark Collection</h1>
+
+        <!-- Step 1: Configuration -->
+        <div class="setup-section">
+            <div class="input-group">
+                <label for="subjectSelect">Subject:</label>
+                <select id="subjectSelect">
+                    <option value="" disabled selected>Choose Subject</option>
+                    <option value="Python Django">Python Django</option>
+                    <option value="Data Science">Data Science</option>
+                    <option value="UI/UX">UI/UX</option>
+                    <option value="Ethical Hacking">Ethical Hacking</option>
+                    <option value="Hospital Management">Hospital Management</option>
+                    <option value="Medical Coding">Medical Coding</option>
+                    <option value="Logistics">Logistics</option>
+                    <option value="Digital marketing">Digital marketing</option>
+                    <option value="HR Specialist">HR Specialist</option>
+                    <option value="Graphic Design">Graphic Design</option>
+                    <option value="Mern Stack">Mern Stack</option>
+                    <option value="Tally SAP">Tally SAP</option>
+                    <option value="Auto CAD">Auto CAD</option>
+                </select>
+            </div>
+
+            <div class="input-group">
+                <label for="studentCount">Enter Students total count:</label>
+                <input type="number" id="studentCount" min="1" value="1" style="width: 80px;">
+            </div>
+
+            <button onclick="generateForm()" class="btn-primary">Generate Table</button>
+        </div>
+
+        <!-- Step 2: Data Entry -->
+        <div id="formContainer" class="form-container" style="display: none;">
+            <h3 id="selectedSubjectDisplay" style="text-align: center; color: #555;"></h3>
+
+            <div class="table-header">
+                <div class="col-term">Term</div>
+                <div class="col-name">Student Name</div>
+                <div class="col-mark">Mark</div>
+            </div>
+
+            <div id="studentRows">
+                <!-- Rows will be generated here -->
+            </div>
+
+            <div class="actions">
+                <button onclick="submitAll()" id="submitBtn" class="btn-success">Submit All Data</button>
+            </div>
+            <p>created by rayees</p>
+
+            <div id="statusMessage"></div>
+
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
